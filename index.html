@@ -1,0 +1,390 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+<meta name="robots" content="index, follow">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fútbol Libre Hoy: Partidos y Fútbol en Directo</title>
+<meta name="description" content="Consulta Fútbol Libre Hoy para conocer partidos, horarios, competiciones y opciones para seguir el fútbol en directo desde tus dispositivos.">
+<meta name="keywords" content="Fútbol Libre Hoy, fútbol hoy, partidos de hoy, fútbol en directo, ver fútbol online">
+<meta name="robots" content="index, follow">
+
+<style>
+:root {
+  --dark:#172333;
+  --orange:#ef713e;
+  --cream:#f7f4ed;
+  --white:#ffffff;
+  --muted:#687383;
+  --line:#e8e3da;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  background:var(--cream);
+  color:var(--dark);
+  font-family:Arial,Helvetica,sans-serif;
+  line-height:1.75;
+}
+a{color:inherit}
+.container{max-width:1160px;margin:auto;padding:0 24px}
+.topbar{height:5px;background:linear-gradient(90deg,#ef713e,#ffb36b,#172333)}
+header{
+  background:#fff;
+  border-bottom:1px solid var(--line);
+  position:sticky;top:0;z-index:10;
+}
+.nav{
+  max-width:1160px;margin:auto;padding:15px 24px;
+  display:flex;align-items:center;justify-content:space-between;
+}
+.logo{
+  display:flex;align-items:center;gap:10px;
+  text-decoration:none;font-weight:900;font-size:20px;
+}
+.logo-icon{
+  background:var(--orange);color:#fff;width:39px;height:39px;
+  display:grid;place-items:center;border-radius:12px;
+}
+.logo span:last-child{color:var(--orange)}
+.nav-links{display:flex;align-items:center;gap:25px}
+.nav-links a{text-decoration:none;font-size:14px;font-weight:700}
+.nav-links a:hover{color:var(--orange)}
+.nav-button{
+  background:var(--dark);color:white!important;
+  padding:10px 18px;border-radius:30px;
+}
+.hero{padding:75px 0 60px}
+.hero-grid{
+  display:grid;grid-template-columns:1.1fr .9fr;
+  align-items:center;gap:45px;
+}
+.tag{
+  color:#c45429;font-size:12px;font-weight:900;
+  letter-spacing:2px;text-transform:uppercase;
+}
+h1{
+  font-size:clamp(42px,6vw,76px);
+  line-height:1.02;letter-spacing:-3px;margin:15px 0 22px;
+}
+h1 span{color:var(--orange)}
+.hero p{font-size:17px;color:#5e6877;max-width:630px}
+.buttons{display:flex;gap:12px;flex-wrap:wrap;margin-top:25px}
+.btn{
+  display:inline-block;text-decoration:none;padding:13px 21px;
+  border-radius:9px;font-weight:800;transition:.2s;
+}
+.btn-primary{background:var(--orange);color:white}
+.btn-primary:hover{background:#d85c2b;transform:translateY(-2px)}
+.btn-light{background:white;border:1px solid var(--line)}
+.hero-visual{
+  min-height:370px;border-radius:25px;padding:30px;
+  display:flex;align-items:end;position:relative;overflow:hidden;
+  background:radial-gradient(circle at 75% 25%,#f5a65e,transparent 26%),
+  linear-gradient(145deg,#34465c,#111b29);
+  box-shadow:0 22px 55px rgba(20,31,47,.18);
+}
+.hero-visual:before{
+  content:"";position:absolute;width:260px;height:260px;
+  border:2px solid #ffffff30;border-radius:50%;
+  right:-25px;top:40px;
+}
+.ball{
+  position:absolute;right:55px;top:80px;
+  font-size:120px;transform:rotate(-18deg);
+  filter:drop-shadow(0 15px 12px #0007);
+}
+.visual-text{position:relative;color:white;z-index:1;max-width:260px}
+.visual-text small{color:#ffb36b;font-weight:bold;letter-spacing:2px}
+.visual-text strong{display:block;font-size:29px;line-height:1.15;margin-top:8px}
+.newsbar{background:var(--dark);color:#fff}
+.newsbar .container{padding-top:14px;padding-bottom:14px;font-size:14px}
+.newsbar b{color:#ffb36b;margin-right:15px}
+main{padding:55px 0 75px}
+.content-grid{
+  display:grid;grid-template-columns:minmax(0,1fr) 290px;gap:38px;
+}
+article h2,.section-title{
+  font-size:32px;line-height:1.2;letter-spacing:-1px;margin:0 0 18px;
+}
+article h3{font-size:22px;line-height:1.3;margin:30px 0 10px}
+article p{color:#566171;margin:0 0 17px}
+article .lead{font-size:18px;color:#3f4b5b}
+.sidebar{
+  background:var(--dark);color:white;padding:25px;
+  border-radius:17px;height:max-content;position:sticky;top:90px;
+}
+.sidebar small{color:#ffb36b;font-weight:bold;letter-spacing:1.5px}
+.sidebar h3{font-size:24px;line-height:1.25;margin:12px 0}
+.sidebar p{color:#c5ced9;font-size:14px}
+.sidebar a{color:#fff;text-decoration:none;border-bottom:2px solid var(--orange);font-weight:bold}
+.features{
+  display:grid;grid-template-columns:repeat(3,1fr);
+  gap:14px;margin:30px 0;
+}
+.feature{
+  background:#fff;border:1px solid var(--line);
+  border-radius:14px;padding:19px;
+}
+.feature-icon{
+  width:40px;height:40px;background:#fff0e7;color:#c45429;
+  display:grid;place-items:center;border-radius:11px;font-size:20px;
+}
+.feature strong{display:block;margin:10px 0 4px}
+.feature p{font-size:13px;margin:0}
+.note{
+  background:#fff0e7;border-left:4px solid var(--orange);
+  padding:19px 21px;margin:27px 0;border-radius:0 12px 12px 0;
+  color:#644a3c;
+}
+.note strong{color:#b94c25}
+.dark-section{background:var(--dark);color:white;padding:50px 0}
+.dark-section h2{font-size:34px;line-height:1.2;margin:0 0 14px}
+.dark-section>div>p{color:#c4ceda;max-width:760px}
+.steps{
+  display:grid;grid-template-columns:repeat(3,1fr);
+  gap:15px;margin-top:25px;
+}
+.step{
+  border:1px solid #ffffff25;background:#ffffff09;
+  border-radius:14px;padding:20px;
+}
+.step b{color:#ffb36b}
+.step p{color:#c4ceda;font-size:14px;margin-bottom:0}
+.faq{padding:55px 0}
+.faq-item{
+  background:#fff;border:1px solid var(--line);
+  padding:19px 21px;border-radius:12px;margin:12px 0;
+}
+.faq-item h3{font-size:17px;margin:0 0 7px}
+.faq-item p{color:#606b79;margin:0}
+.final-cta{
+  margin-top:35px;padding:32px;border-radius:20px;
+  background:linear-gradient(110deg,#ed713d,#f5a15e);
+  color:white;display:flex;justify-content:space-between;
+  align-items:center;gap:20px;
+}
+.final-cta h2{margin:0 0 5px;font-size:27px}
+.final-cta p{margin:0;color:#fff4eb}
+.final-cta a{background:var(--dark);color:#fff;white-space:nowrap}
+footer{background:#111b29;color:#c5ced9;padding:32px 0}
+.footer-row{display:flex;justify-content:space-between;gap:20px;align-items:center}
+footer p{font-size:13px;color:#8d9aaa;margin:5px 0}
+@media(max-width:850px){
+  .hero-grid,.content-grid{grid-template-columns:1fr}
+  .sidebar{position:static}
+  .features,.steps{grid-template-columns:1fr}
+}
+@media(max-width:600px){
+  .container{padding-left:18px;padding-right:18px}
+  .nav{padding:12px 18px}
+  .nav-links a:not(.nav-button){display:none}
+  .hero{padding:48px 0 40px}
+  h1{letter-spacing:-2px}
+  .hero-visual{min-height:290px}
+  .ball{font-size:90px;right:25px}
+  .final-cta,.footer-row{flex-direction:column;align-items:flex-start}
+  .final-cta{padding:24px}
+}
+</style>
+</head>
+
+<body>
+<div class="topbar"></div>
+
+<header>
+  <nav class="nav">
+    <a href="#" class="logo">
+      <span class="logo-icon">⚽</span>
+      CANCHA<span>HOY</span>
+    </a>
+    <div class="nav-links">
+      <a href="#partidos">Partidos</a>
+      <a href="#guia">Guía</a>
+      <a href="#preguntas">Preguntas</a>
+      <a class="nav-button" href="https://ffutbollibre.com/" target="_blank" rel="noopener">Ver fútbol</a>
+    </div>
+  </nav>
+</header>
+
+<section class="hero">
+  <div class="container hero-grid">
+    <div>
+      <div class="tag">La pasión del fútbol, cada día</div>
+      <h1>Vive el fútbol de <span>hoy</span></h1>
+      <p>Descubre una guía práctica para conocer los partidos del día, consultar horarios, seguir las principales competiciones y encontrar información sobre el fútbol en directo.</p>
+      <div class="buttons">
+        <a class="btn btn-primary" href="https://ffutbollibre.com/" target="_blank" rel="noopener">Watch Live Match ↗</a>
+        <a class="btn btn-light" href="#partidos">Explorar contenido</a>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="ball">⚽</div>
+      <div class="visual-text">
+        <small>90 MINUTOS DE EMOCIÓN</small>
+        <strong>Cada partido tiene una historia.</strong>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="newsbar">
+  <div class="container"><b>EN EL RADAR</b> Ligas · Copas · Equipos · Resultados · Actualidad</div>
+</div>
+
+<main id="partidos">
+<div class="container content-grid">
+<article>
+  <div class="tag">Guía para aficionados</div>
+  <h2>Fútbol Libre Hoy: descubre cómo seguir la jornada</h2>
+
+  <p class="lead">Para millones de aficionados, el fútbol es mucho más que un deporte. Es una pasión que reúne a familias, amigos y seguidores de diferentes países frente a un mismo encuentro. Cada jornada trae nuevas historias, goles inesperados, rivalidades y momentos que pueden cambiar el rumbo de una competición.</p>
+
+  <p>Por eso, consultar la programación diaria se ha convertido en parte de la rutina de quienes desean estar al tanto de sus equipos favoritos. La búsqueda de Fútbol Libre Hoy suele estar relacionada con el interés por conocer qué partidos se disputan, cuáles son sus horarios y qué opciones existen para seguir la acción desde diferentes dispositivos.</p>
+
+  <h3>Consulta los partidos antes de que comience la jornada</h3>
+  <p>Una buena forma de organizar tu día futbolístico es revisar primero el calendario. Las competiciones nacionales e internacionales pueden ofrecer varios encuentros en una misma fecha, y no todos comienzan a la misma hora. Consultar la programación con anticipación te permite elegir los partidos que más te interesan y evitar perderte el inicio.</p>
+
+  <p>También conviene comprobar la zona horaria. Los horarios publicados por una competición pueden mostrarse en la hora local del país organizador, mientras que tú podrías encontrarte en otra región. Verifica siempre la hora correspondiente a tu ubicación y revisa posibles cambios anunciados por los organizadores.</p>
+
+  <div class="features">
+    <div class="feature">
+      <div class="feature-icon">▦</div>
+      <strong>Calendario</strong>
+      <p>Organiza los encuentros y consulta sus horarios.</p>
+    </div>
+    <div class="feature">
+      <div class="feature-icon">◉</div>
+      <strong>Resultados</strong>
+      <p>Conoce los marcadores y momentos destacados.</p>
+    </div>
+    <div class="feature">
+      <div class="feature-icon">♧</div>
+      <strong>Competiciones</strong>
+      <p>Explora ligas, copas y torneos internacionales.</p>
+    </div>
+  </div>
+
+  <h3>Las competiciones que mantienen viva la emoción</h3>
+  <p>El calendario del fútbol ofrece alternativas para todos los gustos. Las grandes ligas europeas reúnen a clubes históricos y jugadores reconocidos, mientras que los campeonatos de Sudamérica destacan por su intensidad, sus clásicos y la cercanía de sus aficionados con los equipos. Los torneos continentales añaden otro nivel de emoción, porque enfrentan a clubes de diferentes países.</p>
+
+  <p>Además, los partidos de selecciones nacionales suelen despertar un interés especial. Las eliminatorias, los campeonatos regionales y las competiciones internacionales permiten ver a los mejores jugadores representando a sus países. Si te gusta descubrir nuevos talentos, también puedes prestar atención a los torneos juveniles y a las ligas menos conocidas.</p>
+
+  <h3>Dónde buscar transmisiones de fútbol en directo</h3>
+  <p>La disponibilidad de los partidos depende de los derechos audiovisuales de cada competición y del país desde el que quieras verlos. Una plataforma puede tener autorización para emitir un torneo en una región, pero no en otra. Por eso, lo más recomendable es consultar las páginas oficiales de las ligas, los clubes y los canales deportivos que operan en tu territorio.</p>
+
+  <p>Si buscas información relacionada con Fútbol Libre Hoy, puedes visitar <a href="https://ffutbollibre.com/" target="_blank" rel="noopener"><strong>Fútbol Libre Hoy</strong></a> como punto de referencia para continuar explorando el contenido relacionado con el fútbol. Comprueba siempre la disponibilidad de cada encuentro y prioriza las fuentes autorizadas. Evita páginas que pidan datos personales innecesarios o que te obliguen a instalar programas desconocidos.</p>
+
+  <div class="note"><strong>Importante:</strong> los derechos de retransmisión cambian según el país y la competición. Comprueba siempre qué servicios oficiales están disponibles en tu región.</div>
+
+  <!-- PART 2 YAHAN SE CONTINUE HOGA -->
+
+  <h3>Cómo prepararte para disfrutar de cada encuentro</h3>
+  <p>Una pequeña preparación puede mejorar mucho tu experiencia. Primero, selecciona los partidos que deseas seguir y anota sus horarios. Después, comprueba qué canal o plataforma autorizada ofrece la retransmisión en tu región. Si tienes pensado ver varios encuentros, organiza tu tiempo para no confundir los comienzos ni perderte los momentos importantes.</p>
+
+  <p>También es recomendable comprobar la conexión a internet antes del inicio. Una red estable ayuda a evitar interrupciones, especialmente cuando utilizas servicios de vídeo en alta definición. Si compartes la conexión con otras personas, intenta limitar las descargas pesadas durante el partido. Así podrás disfrutar de una reproducción más fluida.</p>
+
+  <h3>Disfruta del fútbol desde diferentes dispositivos</h3>
+  <p>Hoy es posible seguir la actualidad futbolística desde prácticamente cualquier lugar. El teléfono móvil resulta muy práctico para consultar marcadores, noticias y horarios cuando estás fuera de casa. El ordenador permite revisar estadísticas y noticias mientras sigues un encuentro, mientras que una Smart TV ofrece una pantalla más grande para disfrutar del ambiente del partido.</p>
+
+  <p>Antes de reproducir un encuentro, verifica que la plataforma sea compatible con tu dispositivo. Mantén actualizado el navegador o la aplicación y descarga programas únicamente desde fuentes oficiales. No necesitas instalar extensiones desconocidas ni compartir información privada para consultar una programación deportiva legítima.</p>
+
+  <h3>La importancia de los resultados y las estadísticas</h3>
+  <p>Seguir un partido no significa prestar atención solamente al marcador final. Las estadísticas pueden ayudarte a entender cómo se desarrolló el encuentro. La posesión, los disparos, los tiros de esquina y las tarjetas ofrecen información adicional sobre el rendimiento de cada equipo. También permiten comparar el desarrollo de un partido con los resultados anteriores.</p>
+
+  <p>Si no puedes ver un encuentro completo, los resúmenes y las crónicas deportivas son una alternativa útil para conocer sus momentos más importantes. Puedes consultar las páginas oficiales de los clubes y las competiciones para encontrar noticias, declaraciones y vídeos publicados con autorización.</p>
+
+  <h3>Consejos para encontrar información deportiva confiable</h3>
+  <p>Internet ofrece una gran cantidad de páginas relacionadas con el fútbol, pero no todas presentan información actualizada o verificada. Antes de confiar en un horario, resultado o anuncio, revisa la fuente y comprueba si coincide con la información publicada por el organizador del torneo. Esta sencilla costumbre ayuda a evitar datos incorrectos y enlaces engañosos.</p>
+
+  <p>Presta atención a las páginas que muestran publicidad excesiva, solicitan permisos innecesarios o intentan descargar archivos automáticamente. No introduzcas contraseñas ni datos bancarios en sitios que no puedas identificar. Para consultar retransmisiones, utiliza proveedores autorizados y revisa sus condiciones de acceso.</p>
+
+  <h3>Una jornada de fútbol para compartir</h3>
+  <p>Una de las mejores partes del fútbol es compartirlo con otras personas. Un clásico, una final o un partido decisivo pueden convertirse en una ocasión para reunirse con amigos y familiares. Preparar con tiempo el encuentro, conocer los equipos y comentar las alineaciones hace que la experiencia sea todavía más entretenida.</p>
+
+  <p>Con una agenda organizada, información fiable y un dispositivo preparado, puedes seguir mejor cada jornada. Tanto si prefieres las grandes competiciones como si disfrutas descubriendo equipos nuevos, siempre hay una historia futbolística que merece la pena conocer.</p>
+
+<section class="dark-section" id="guia">
+  <div class="container">
+    <div class="tag">Tu rutina futbolística</div>
+    <h2>Tres pasos para seguir el fútbol de hoy</h2>
+    <p>Organizarte antes del comienzo de los encuentros te permite encontrar la información que necesitas y disfrutar de cada partido sin complicaciones.</p>
+
+    <div class="steps">
+      <div class="step">
+        <b>01 — CONSULTA</b>
+        <p>Revisa el calendario de la jornada y selecciona los partidos que te interesan.</p>
+      </div>
+      <div class="step">
+        <b>02 — COMPRUEBA</b>
+        <p>Confirma los horarios locales y las opciones oficiales de retransmisión disponibles.</p>
+      </div>
+      <div class="step">
+        <b>03 — DISFRUTA</b>
+        <p>Prepara tu dispositivo y conexión antes del silbato inicial.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="container faq" id="preguntas">
+  <div class="tag">Respuestas para aficionados</div>
+  <h2 class="section-title">Preguntas frecuentes sobre Fútbol Libre Hoy</h2>
+
+  <div class="faq-item">
+    <h3>¿Qué significa Fútbol Libre Hoy?</h3>
+    <p>Es una búsqueda relacionada con el interés por conocer los partidos de fútbol de la jornada, sus horarios, resultados y opciones para seguir los encuentros.</p>
+  </div>
+
+  <div class="faq-item">
+    <h3>¿Cómo puedo conocer los partidos que se juegan hoy?</h3>
+    <p>Puedes consultar los calendarios oficiales de las ligas, los clubes y las competiciones. Allí encontrarás fechas, horarios y detalles de los encuentros programados.</p>
+  </div>
+
+  <div class="faq-item">
+    <h3>¿Los horarios son iguales en todos los países?</h3>
+    <p>No. Los horarios pueden mostrarse según la zona horaria del organizador. Comprueba siempre la hora local correspondiente a tu ubicación.</p>
+  </div>
+
+  <div class="faq-item">
+    <h3>¿Puedo consultar fútbol desde mi teléfono móvil?</h3>
+    <p>Sí. Puedes utilizar el navegador o aplicaciones deportivas para consultar resultados, noticias y calendarios. Para ver transmisiones, utiliza servicios autorizados compatibles con tu dispositivo.</p>
+  </div>
+
+  <div class="faq-item">
+    <h3>¿Todos los partidos están disponibles en directo?</h3>
+    <p>No necesariamente. La disponibilidad depende de los derechos audiovisuales, la competición y el territorio en el que te encuentres.</p>
+  </div>
+
+  <div class="faq-item">
+    <h3>¿Cómo puedo evitar páginas deportivas poco confiables?</h3>
+    <p>Comprueba la dirección del sitio, evita descargas desconocidas y no compartas datos personales o bancarios con páginas que no puedas verificar.</p>
+  </div>
+
+  <div class="final-cta">
+    <div>
+      <h2>¡Que no se te escape ningún partido!</h2>
+      <p>Consulta la información futbolística y prepárate para la próxima jornada.</p>
+    </div>
+    <a class="btn" href="https://ffutbollibre.com/" target="_blank" rel="noopener">Fútbol Libre Hoy ↗</a>
+  </div>
+</section>
+
+<footer>
+  <div class="container footer-row">
+    <div>
+      <a href="#" class="logo" style="color:white">
+        <span class="logo-icon">⚽</span>
+        CANCHA<span>HOY</span>
+      </a>
+      <p>Un espacio informativo para los apasionados del fútbol.</p>
+    </div>
+    <p>© 2026 CanchaHoy. Contenido informativo. Consulta las fuentes oficiales de cada competición.</p>
+  </div>
+</footer>
+
+</body>
+</html>
